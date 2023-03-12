@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # 3rd party
     'rest_framework',
     'rest_framework_simplejwt',
+    'rest_framework.authtoken',
    
    # local
    'user',
@@ -148,3 +149,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'user.User'
+
+ESKIZ_URL = 'https://notify.eskiz.uz/api/'
+ESKIZ_PASSWORD = 'BD4!z^trT6kUawje'
+ESKIZ_EMAIL = 'markakbarov@gmail.com'
