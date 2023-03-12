@@ -18,9 +18,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
+import os
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!73%uzf_i9yulza=oi1&!&+ns2xbol@7e%xe12txpyrxu6%3$)'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test_db',
-        'USER': 'test_user',
-        'PASSWORD': '2404',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': os.environ.get('DATABASE_NAME', 'DATABASE_NAME'),
+        'USER': os.environ.get('DATABASE_USER', 'DATABASE_USER'),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD', 'DATABASE_PASSWORD'),
+        'HOST': os.environ.get('DATABASE_HOST', 'DATABASE_HOST'),
+        'PORT': os.environ.get('DATABASE_PORT', 'DATABASE_PORT')
     }
 }
 
