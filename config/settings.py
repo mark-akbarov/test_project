@@ -159,5 +159,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'user.User'
 
 ESKIZ_URL = 'https://notify.eskiz.uz/api/'
-ESKIZ_PASSWORD = 'BD4!z^trT6kUawje'
+ESKIZ_PASSWORD = 'MJ0G0uxFaDmVK0cfG3msXCfIyaVLI4IQPxQeAjmq'
 ESKIZ_EMAIL = 'markakbarov@gmail.com'

@@ -23,11 +23,11 @@ def send_sms(mobile_phone: str, code: str):
     "message": f"Your verification code is {code}",
     "from": "4546"
     }
-    url = ESKIZ_URL + "message/sms/send"
+    url = ESKIZ_URL + "message/sms/send/"
     token = get_token()
     headers = {'Authorization': f'Bearer {token}'}
     res = requests.post(url, headers=headers, json=body)
-    print(res)
+    print(res.content)
     if res.status_code == 200:
         return 'success'
 
