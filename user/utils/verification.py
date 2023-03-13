@@ -20,7 +20,7 @@ def get_token():
 def send_sms(mobile_phone: str, code: str):
     body = {
     "mobile_phone": mobile_phone,
-    "message": f"Your verification code is {code}",
+    "message": f"Your verification code from Appointee: {code}",
     "from": "4546"
     }
     url = ESKIZ_URL + "message/sms/send/"
